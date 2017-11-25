@@ -48,6 +48,11 @@ public class Main extends Applet implements Runnable, KeyListener {
         gfx.setColor(Color.black);
         gfx.fillRect(0, 0, 500, 500);
 
+        if (img == null) {
+            img = createImage(this.getSize().width, this.getSize().height);
+            gfx = img.getGraphics();
+        }
+
         write(gfx);
 
         /*if (!gameOver) {
